@@ -24,11 +24,6 @@ public class Cell implements Comparable<Cell>{
     @Override
     public int compareTo(@NotNull final Cell cell) {
         final int cmp = key.compareTo(cell.getKey());
-        if(cmp == 0){
-            return Long.compare(cell.getValue()
-                                    .getVersion(), value.getVersion());
-        } else{
-            return cmp;
-        }
+        return cmp == 0 ? Long.compare(cell.getValue().getVersion(), value.getVersion()) : cmp;
     }
 }

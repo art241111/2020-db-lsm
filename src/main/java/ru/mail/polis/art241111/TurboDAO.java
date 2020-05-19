@@ -31,6 +31,11 @@ public class TurboDAO implements DAO {
     private MemTable memTable;
     private int generation;
 
+    /**
+     * Constructor to create DAO
+     * @param dir - is the direction fo DAO
+     * @param flushThreshold - is the memory threshold
+     */
     public TurboDAO(@NotNull final File dir, final long flushThreshold) {
         this.memTable = new MemTable();
         this.flushThreshold = flushThreshold;
