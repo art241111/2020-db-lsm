@@ -54,7 +54,6 @@ public final class DAOFactory {
             throw new IllegalArgumentException("Path is not a directory: " + data);
         }
 
-        // TODO: Implement me
         return new TurboDAO(data, MAX_HEAP / 32);
     }
 }
